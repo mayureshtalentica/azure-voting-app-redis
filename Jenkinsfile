@@ -7,6 +7,14 @@ pipeline {
                 echo  " barch is $GIT_BRANCH"
             }
         }
+        stage('shellcommand') {
+            steps {
+                sh '''
+                whoami
+                date
+                '''
+            }
+        }
 
 
     }
